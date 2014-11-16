@@ -9,7 +9,7 @@
     <string name="connect">Connect Service</string>
     <string name="title_activity_main3">MainActivity</string>
     <string name="showlocation">showlocation</string>
-    <string name="addLocation">addLocation</string>
+    <string name="addLocation">createPath</string>
     <string name="title_addLocations">addLocations</string>
     <string name="title_activity_geoclient_usermode">Geofence Client - User Mode</string>
     <string name="geoInterface">geoInterface</string>
@@ -17,9 +17,15 @@
     <string name="exit">exit</string>
     <string name="spinner_title1">paths</string>
     <string name="spinner_title2">vehicles</string>
-    
-    
     <string name="url">http://192.16.13.118:8080/api.geofence/rest/pathservice/allpaths</string>
+    
+    <string name="addpathurl">http://192.16.13.118:8080/api.geofence/rest/pathservice/addPath</string>
+    <string name="createnewpath_textView1">pathname</string>
+    <string name="title_activity_create_new_path">CreateNewPathActivity</string>
+
+    <!-- menu items of createnew path -->
+    <string name="newpath_cancel">Cancel</string>
+    <string name="newpath_save">Save</string>
 
     <string-array name="planets_array">
         <item>Mercury</item>

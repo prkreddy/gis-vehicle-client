@@ -57,9 +57,10 @@ public class AddLocationsActivity extends FragmentActivity {
 				mMap = ((MapFragment) getFragmentManager().findFragmentById(
 						R.id.map)).getMap();
 				mMap.setMyLocationEnabled(true);
+				
 			}
 			if (mMap != null) {
-				mMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
+				mMap.setMapType(GoogleMap.MAP_TYPE_HYBRID);
 
 				Intent intent = getIntent();
 				String lat = intent.getStringExtra(MainActivity.LAT);

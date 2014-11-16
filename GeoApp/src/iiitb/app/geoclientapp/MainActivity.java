@@ -107,7 +107,7 @@ public class MainActivity extends FragmentActivity implements
 	}
 
 	protected void addLocation() {
-		Intent intent = new Intent(this, AddLocationsActivity.class);
+		Intent intent = new Intent(this, CreateNewPathActivity.class);
 		startActivity(intent);
 	}
 

@@ -78,7 +78,7 @@ public class ClientUserModeActivity extends Activity {
 						.findFragmentById(R.id.map)).getMap();
 			}
 			// Getting GoogleMap object from the fragment
-
+			googleMap.setMapType(GoogleMap.MAP_TYPE_HYBRID);
 			// Enabling MyLocation Layer of Google Map
 			googleMap.setMyLocationEnabled(true);
 
@@ -152,9 +152,9 @@ public class ClientUserModeActivity extends Activity {
 
 				// Adding marker on the Google Map
 
-				// drawMarker(latLong);
+				 drawMarker(latLong);
 			}
-			googleMap.addMarker(markerOptions);
+			//googleMap.addMarker(markerOptions);
 			googleMap.moveCamera(CameraUpdateFactory.newLatLng(latLong));
 
 			// Setting the zoom level in the map on last position is clicked
