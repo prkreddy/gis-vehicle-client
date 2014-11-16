@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">GeoApp</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="get_location">Get Location</string>
+    <string name="disconnect">Disconnect Service</string>
+    <string name="connect">Connect Service</string>
+    <string name="title_activity_main3">MainActivity</string>
+    <string name="showlocation">showlocation</string>
+    <string name="addLocation">addLocation</string>
+    <string name="title_addLocations">addLocations</string>
+    <string name="title_activity_geoclient_usermode">Geofence Client - User Mode</string>
+    <string name="geoInterface">geoInterface</string>
+    <string name="Admin_mode">Admin mode</string>
+    <string name="exit">exit</string>
+    <string name="spinner_title1">paths</string>
+    <string name="spinner_title2">vehicles</string>
+    
+    
+    <string name="url">http://192.16.13.118:8080/api.geofence/rest/pathservice/allpaths</string>
+
+    <string-array name="planets_array">
+        <item>Mercury</item>
+        <item>Venus</item>
+        <item>Earth</item>
+        <item>Mars</item>
+        <item>Jupiter</item>
+        <item>Saturn</item>
+        <item>Uranus</item>
+        <item>Neptune</item>
+    </string-array>
+
+</resources>
