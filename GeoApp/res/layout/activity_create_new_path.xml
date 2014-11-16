@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <!--
+         <TextView
+        android:id="@+id/createnewpath_textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/createnewpath_textView1" />
+
+    <EditText
+        android:id="@+id/createnewpath_editText1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="44dp"
+        android:layout_marginTop="29dp"
+        android:ems="10" />
+    -->
+
+    <TextView
+        android:id="@+id/createnewpath_textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:text="@string/createnewpath_textView1"
+        android:textColor="#000fff"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/createnewpath_editText1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:gravity="right"
+        android:inputType="text" />
+
+    <fragment
+        android:id="@+id/createnewpath_fragment1"
+        android:name="com.google.android.gms.maps.MapFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp" />
+
+</LinearLayout>
