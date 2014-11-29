@@ -65,10 +65,7 @@ public class CreateNewPathActivity extends FragmentActivity {
 			mMap.setMapType(GoogleMap.MAP_TYPE_HYBRID);
 			sharedPreferences = getSharedPreferences("location", 0);
 
-			// locationCount = sharedPreferences.getInt("locationCount", 0);
-			//
-			// // Getting stored zoom level if exists else return 0
-			// String zoom = sharedPreferences.getString("zoom", "0");
+			
 
 		}
 		mMap.setOnMapClickListener(new GoogleMap.OnMapClickListener() {

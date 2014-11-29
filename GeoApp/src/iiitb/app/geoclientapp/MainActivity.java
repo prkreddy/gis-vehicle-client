@@ -164,7 +164,7 @@ public class MainActivity extends FragmentActivity implements
 
 	public void showLocation() {
 		// Get the current location's latitude & longitude
-		Location currentLocation = mLocationClient.getLastLocation();
+		// Location currentLocation = mLocationClient.getLastLocation();
 		// String msg = "Current Location: "
 		// + Double.toString(currentLocation.getLatitude()) + ","
 		// + Double.toString(currentLocation.getLongitude());
@@ -173,10 +173,10 @@ public class MainActivity extends FragmentActivity implements
 		// locationLabel.setText(msg);
 		try {
 
-			Intent intent = new Intent(this, Main3Activity.class);
+			Intent intent = new Intent(this, ProximityMainActivity.class);
 
-			intent.putExtra(LAT, currentLocation.getLatitude() + "");
-			intent.putExtra(LON, currentLocation.getLongitude() + "");
+			// intent.putExtra(LAT, currentLocation.getLatitude() + "");
+			// intent.putExtra(LON, currentLocation.getLongitude() + "");
 			startActivity(intent);
 		} catch (Exception ex) {
 			ex.printStackTrace();

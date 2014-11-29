@@ -2,15 +2,17 @@ package iiitb.app.geoclientapp.model;
 
 public class Vehicle {
 
+	private VehicleLocation vehicleLocation;
+
+	public VehicleLocation getVehicleLocation() {
+		return vehicleLocation;
+	}
+
+	public void setVehicleLocation(VehicleLocation vehicleLocation) {
+		this.vehicleLocation = vehicleLocation;
+	}
+
 	private int vehicleId;
-
-	private String vehicleName;
-
-	private String vehicleRegNo;
-
-	private boolean alarmflag;
-
-	private int pathId;
 
 	public int getVehicleId() {
 		return vehicleId;
@@ -19,6 +21,14 @@ public class Vehicle {
 	public void setVehicleId(int vehicleId) {
 		this.vehicleId = vehicleId;
 	}
+
+	private String vehicleName;
+
+	private String vehicleRegNo;
+
+	private boolean alarmflag;
+
+	private int pathId;
 
 	public String getVehicleName() {
 		return vehicleName;

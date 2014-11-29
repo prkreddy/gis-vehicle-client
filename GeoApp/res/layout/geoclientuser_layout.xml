@@ -11,6 +11,8 @@
         android:layout_marginLeft="8dip"
         android:layout_marginRight="8dip"
         android:layout_marginTop="20dip"
+        
+
         android:prompt="@string/spinner_title1" />
     <!-- android:prompt="@string/spinner_title" -->
 

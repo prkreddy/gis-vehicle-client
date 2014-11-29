@@ -18,14 +18,21 @@
     <string name="spinner_title1">paths</string>
     <string name="spinner_title2">vehicles</string>
     <string name="url">http://192.16.13.118:8080/api.geofence/rest/pathservice/allpaths</string>
-    
     <string name="addpathurl">http://192.16.13.118:8080/api.geofence/rest/pathservice/addPath</string>
+    <string name="addvehicleurl">http://192.16.13.118:8080/api.geofence/rest/vehicleservice/addVehicle</string>
     <string name="createnewpath_textView1">pathname</string>
     <string name="title_activity_create_new_path">CreateNewPathActivity</string>
 
     <!-- menu items of createnew path -->
     <string name="newpath_cancel">Cancel</string>
     <string name="newpath_save">Save</string>
+
+    <!-- client mode -->
+    <string name="title_activity_geofence_client_mode">Geofence Clien-AdminMode</string>
+    <string name="User_mode">User Mode</string>
+    <string name="adminmode_newVehicle">New Vehicle</string>
+    <string name="adminmode_newPath">New Path</string>
+    <string name="createnewvehicle_textView1">New Vechicle</string>
 
     <string-array name="planets_array">
         <item>Mercury</item>
@@ -37,5 +44,8 @@
         <item>Uranus</item>
         <item>Neptune</item>
     </string-array>
+
+    <string name="title_activity_create_new_vehicle">CreateNewVehicle</string>
+    <string name="title_activity_proximity_main">ProximityMainActivity</string>
 
 </resources>

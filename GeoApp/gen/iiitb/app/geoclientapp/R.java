@@ -412,46 +412,59 @@ containing a value of this type.
         public static final int powered_by_google_light=0x7f020020;
     }
     public static final class id {
-        public static final int Admin_mode=0x7f0b0027;
-        public static final int action_settings=0x7f0b0024;
-        public static final int addLocation=0x7f0b001b;
-        public static final int addressLabel=0x7f0b001e;
+        public static final int Admin_mode=0x7f0b0030;
+        public static final int action_settings=0x7f0b002b;
+        public static final int addLocation=0x7f0b001e;
+        public static final int addressLabel=0x7f0b0021;
+        public static final int adminmode_basic_spinner1=0x7f0b0027;
+        public static final int adminmode_basic_spinner2=0x7f0b0028;
+        public static final int adminmode_exit=0x7f0b0033;
+        public static final int adminmode_newPath=0x7f0b0035;
+        public static final int adminmode_newVehicle=0x7f0b0034;
         public static final int book_now=0x7f0b000e;
         public static final int buyButton=0x7f0b000a;
         public static final int buy_now=0x7f0b000f;
         public static final int buy_with_google=0x7f0b0010;
         public static final int classic=0x7f0b0011;
-        public static final int connect=0x7f0b0019;
+        public static final int connect=0x7f0b001c;
         public static final int createnewpath_editText1=0x7f0b0015;
         public static final int createnewpath_fragment1=0x7f0b0016;
         public static final int createnewpath_textView1=0x7f0b0014;
-        public static final int disconnect=0x7f0b0018;
-        public static final int geoInterface=0x7f0b001c;
-        public static final int getLocation=0x7f0b0017;
+        public static final int createnewvehicle_editText1=0x7f0b0018;
+        public static final int createnewvehicle_textView1=0x7f0b0017;
+        public static final int disconnect=0x7f0b001b;
+        public static final int geoInterface=0x7f0b001f;
+        public static final int getLocation=0x7f0b001a;
         public static final int grayscale=0x7f0b0012;
         public static final int holo_dark=0x7f0b0005;
         public static final int holo_light=0x7f0b0006;
         public static final int hybrid=0x7f0b0000;
-        public static final int locationLabel=0x7f0b001d;
-        public static final int map=0x7f0b001f;
+        public static final int locationLabel=0x7f0b0020;
+        public static final int map=0x7f0b0022;
+        public static final int map2=0x7f0b0029;
         public static final int match_parent=0x7f0b000c;
         public static final int monochrome=0x7f0b0013;
-        public static final int newpath_cancel=0x7f0b0026;
-        public static final int newpath_save=0x7f0b0025;
+        public static final int newpath_cancel=0x7f0b002d;
+        public static final int newpath_save=0x7f0b002c;
+        public static final int newvechile_cancel=0x7f0b002f;
+        public static final int newvechile_save=0x7f0b002e;
+        public static final int newvehicle_spinner=0x7f0b0019;
         public static final int none=0x7f0b0001;
         public static final int normal=0x7f0b0002;
         public static final int production=0x7f0b0007;
         public static final int sandbox=0x7f0b0008;
         public static final int satellite=0x7f0b0003;
         public static final int selectionDetails=0x7f0b000b;
-        public static final int showlocation=0x7f0b001a;
-        public static final int spinner1=0x7f0b0021;
-        public static final int spinner2=0x7f0b0020;
+        public static final int showlocation=0x7f0b001d;
+        public static final int spinner1=0x7f0b0024;
+        public static final int spinner2=0x7f0b0023;
         public static final int strict_sandbox=0x7f0b0009;
         public static final int terrain=0x7f0b0004;
-        public static final int textView1=0x7f0b0023;
-        public static final int textView2=0x7f0b0022;
-        public static final int user_exit=0x7f0b0028;
+        public static final int textView1=0x7f0b0026;
+        public static final int textView2=0x7f0b0025;
+        public static final int tv_notification=0x7f0b002a;
+        public static final int user_exit=0x7f0b0031;
+        public static final int user_mode=0x7f0b0032;
         public static final int wrap_content=0x7f0b000d;
     }
     public static final class integer {
@@ -459,26 +472,37 @@ containing a value of this type.
     }
     public static final class layout {
         public static final int activity_create_new_path=0x7f030000;
-        public static final int activity_main=0x7f030001;
-        public static final int activity_main2=0x7f030002;
-        public static final int activity_main3=0x7f030003;
-        public static final int geoclient_usermode=0x7f030004;
-        public static final int geoclientuser_layout=0x7f030005;
-        public static final int layout=0x7f030006;
+        public static final int activity_create_new_vehicle=0x7f030001;
+        public static final int activity_main=0x7f030002;
+        public static final int activity_main2=0x7f030003;
+        public static final int activity_main3=0x7f030004;
+        public static final int activity_proximity_main=0x7f030005;
+        public static final int geoclient_usermode=0x7f030006;
+        public static final int geoclientuser_layout=0x7f030007;
+        public static final int geofenceadmin_layout=0x7f030008;
+        public static final int layout=0x7f030009;
+        public static final int notification=0x7f03000a;
     }
     public static final class menu {
         public static final int create_new_path=0x7f0a0000;
-        public static final int geoclient_usermode=0x7f0a0001;
-        public static final int geoclientuser_layout=0x7f0a0002;
-        public static final int main=0x7f0a0003;
-        public static final int main3=0x7f0a0004;
+        public static final int create_new_vehicle=0x7f0a0001;
+        public static final int geoclient_usermode=0x7f0a0002;
+        public static final int geoclientuser_layout=0x7f0a0003;
+        public static final int geofence_admin_mode=0x7f0a0004;
+        public static final int main=0x7f0a0005;
+        public static final int main3=0x7f0a0006;
+        public static final int proximity_main=0x7f0a0007;
     }
     public static final class string {
         public static final int Admin_mode=0x7f05002f;
+        public static final int User_mode=0x7f05003b;
         public static final int accept=0x7f050002;
         public static final int action_settings=0x7f050024;
         public static final int addLocation=0x7f05002b;
         public static final int addpathurl=0x7f050034;
+        public static final int addvehicleurl=0x7f050035;
+        public static final int adminmode_newPath=0x7f05003d;
+        public static final int adminmode_newVehicle=0x7f05003c;
         public static final int app_name=0x7f050023;
         /**   Text for notification shown when the Android Wear apps needs to be updated. Only shown on the wearable. [CHAR LIMIT=NONE] 
          */
@@ -582,7 +606,8 @@ containing a value of this type.
         public static final int connect=0x7f050028;
         public static final int create_calendar_message=0x7f050005;
         public static final int create_calendar_title=0x7f050004;
-        public static final int createnewpath_textView1=0x7f050035;
+        public static final int createnewpath_textView1=0x7f050036;
+        public static final int createnewvehicle_textView1=0x7f05003e;
         public static final int decline=0x7f050003;
         public static final int disconnect=0x7f050027;
         public static final int exit=0x7f050030;
@@ -591,16 +616,21 @@ containing a value of this type.
         public static final int hello_world=0x7f050025;
         /**  menu items of createnew path 
          */
-        public static final int newpath_cancel=0x7f050037;
-        public static final int newpath_save=0x7f050038;
+        public static final int newpath_cancel=0x7f050038;
+        public static final int newpath_save=0x7f050039;
         public static final int showlocation=0x7f05002a;
         public static final int spinner_title1=0x7f050031;
         public static final int spinner_title2=0x7f050032;
         public static final int store_picture_message=0x7f050001;
         public static final int store_picture_title=0x7f050000;
-        public static final int title_activity_create_new_path=0x7f050036;
+        public static final int title_activity_create_new_path=0x7f050037;
+        public static final int title_activity_create_new_vehicle=0x7f05003f;
         public static final int title_activity_geoclient_usermode=0x7f05002d;
+        /**  client mode 
+         */
+        public static final int title_activity_geofence_client_mode=0x7f05003a;
         public static final int title_activity_main3=0x7f050029;
+        public static final int title_activity_proximity_main=0x7f050040;
         public static final int title_addLocations=0x7f05002c;
         public static final int url=0x7f050033;
         /**  Text on a placeholder buy button when Google Play services is not

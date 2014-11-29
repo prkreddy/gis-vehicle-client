@@ -11,7 +11,7 @@ public class PathData {
 	public PathData() {
 		super();
 		vehicles = new ArrayList<Vehicle>();
-		locations= new ArrayList<Geofence>();
+		locations = new ArrayList<Geofence>();
 	}
 
 	private int pathId;

@@ -38,17 +38,8 @@ public class VehicleLocation {
 		this.time = time;
 	}
 
-	public int getVehicleId() {
-		return vehicleId;
-	}
-
-	public void setVehicleId(int vehicleId) {
-		this.vehicleId = vehicleId;
-	}
-
 	private double longitude;
 
 	private String time;
 
-	private int vehicleId;
 }

@@ -25,6 +25,7 @@ import android.app.Activity;
 import android.app.Dialog;
 import android.app.ProgressDialog;
 import android.content.Context;
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
@@ -49,7 +50,6 @@ import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
 public class ClientUserModeActivity extends Activity {
-
 
 	private List<PathData> pathsdata;
 	private GoogleMap googleMap;
@@ -152,9 +152,9 @@ public class ClientUserModeActivity extends Activity {
 
 				// Adding marker on the Google Map
 
-				 drawMarker(latLong);
+				drawMarker(latLong);
 			}
-			//googleMap.addMarker(markerOptions);
+			// googleMap.addMarker(markerOptions);
 			googleMap.moveCamera(CameraUpdateFactory.newLatLng(latLong));
 
 			// Setting the zoom level in the map on last position is clicked
@@ -185,7 +185,7 @@ public class ClientUserModeActivity extends Activity {
 		String vehiclenames[] = new String[path.getVehicles().size()];
 
 		for (int i = 0; i < path.getVehicles().size(); i++) {
-			vehiclenames[i] = path.getVehicles().get(i).getVehicleName();
+			vehiclenames[i] = path.getVehicles().get(i).getVehicleRegNo();
 		}
 
 		Spinner sp = (Spinner) findViewById(R.id.spinner2);
@@ -193,10 +193,6 @@ public class ClientUserModeActivity extends Activity {
 				android.R.layout.simple_spinner_item, vehiclenames);
 		adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 		sp.setAdapter(adapter);
-		// OnItemSelectedListener spinnerListener = new
-		// myOnItemSelectedListener(
-		// this);
-		// sp.setOnItemSelectedListener(spinnerListener);
 
 	}
 
@@ -303,6 +299,11 @@ public class ClientUserModeActivity extends Activity {
 		int id = item.getItemId();
 		if (id == R.id.action_settings) {
 			return true;
+		} else if (id == R.id.Admin_mode) {
+
+			Intent intent = new Intent(this, GeofenceClientModeActivity.class);
+			startActivity(intent);
+
 		}
 		return super.onOptionsItemSelected(item);
 	}
