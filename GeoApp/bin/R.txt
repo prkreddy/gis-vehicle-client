@@ -153,12 +153,13 @@ int layout activity_create_new_vehicle 0x7f030001
 int layout activity_main 0x7f030002
 int layout activity_main2 0x7f030003
 int layout activity_main3 0x7f030004
-int layout activity_proximity_main 0x7f030005
-int layout geoclient_usermode 0x7f030006
-int layout geoclientuser_layout 0x7f030007
-int layout geofenceadmin_layout 0x7f030008
-int layout layout 0x7f030009
-int layout notification 0x7f03000a
+int layout activity_poly_line 0x7f030005
+int layout activity_proximity_main 0x7f030006
+int layout geoclient_usermode 0x7f030007
+int layout geoclientuser_layout 0x7f030008
+int layout geofenceadmin_layout 0x7f030009
+int layout layout 0x7f03000a
+int layout notification 0x7f03000b
 int menu create_new_path 0x7f0a0000
 int menu create_new_vehicle 0x7f0a0001
 int menu geoclient_usermode 0x7f0a0002
@@ -166,7 +167,8 @@ int menu geoclientuser_layout 0x7f0a0003
 int menu geofence_admin_mode 0x7f0a0004
 int menu main 0x7f0a0005
 int menu main3 0x7f0a0006
-int menu proximity_main 0x7f0a0007
+int menu poly_line 0x7f0a0007
+int menu proximity_main 0x7f0a0008
 int string Admin_mode 0x7f05002f
 int string User_mode 0x7f05003b
 int string accept 0x7f050002
@@ -228,6 +230,7 @@ int string title_activity_create_new_vehicle 0x7f05003f
 int string title_activity_geoclient_usermode 0x7f05002d
 int string title_activity_geofence_client_mode 0x7f05003a
 int string title_activity_main3 0x7f050029
+int string title_activity_poly_line 0x7f050041
 int string title_activity_proximity_main 0x7f050040
 int string title_addLocations 0x7f05002c
 int string url 0x7f050033

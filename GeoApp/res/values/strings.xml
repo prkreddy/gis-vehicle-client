@@ -47,5 +47,6 @@
 
     <string name="title_activity_create_new_vehicle">CreateNewVehicle</string>
     <string name="title_activity_proximity_main">ProximityMainActivity</string>
+    <string name="title_activity_poly_line">PolyLine</string>
 
 </resources>

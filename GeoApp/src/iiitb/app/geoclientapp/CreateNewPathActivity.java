@@ -16,6 +16,7 @@ import org.apache.http.impl.client.DefaultHttpClient;
 
 import android.app.Dialog;
 import android.content.SharedPreferences;
+import android.graphics.Color;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
@@ -29,6 +30,7 @@ import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GooglePlayServicesUtil;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapFragment;
+import com.google.android.gms.maps.model.CircleOptions;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.gson.Gson;
@@ -65,8 +67,6 @@ public class CreateNewPathActivity extends FragmentActivity {
 			mMap.setMapType(GoogleMap.MAP_TYPE_HYBRID);
 			sharedPreferences = getSharedPreferences("location", 0);
 
-			
-
 		}
 		mMap.setOnMapClickListener(new GoogleMap.OnMapClickListener() {
 
@@ -76,6 +76,8 @@ public class CreateNewPathActivity extends FragmentActivity {
 
 				// Drawing marker on the map
 				drawMarker(point);
+
+				drawCircle(point);
 
 				/** Opening the editor object to write data to sharedPreferences */
 				SharedPreferences.Editor editor = sharedPreferences.edit();
@@ -138,6 +140,31 @@ public class CreateNewPathActivity extends FragmentActivity {
 
 		// Adding marker on the Google Map
 		mMap.addMarker(markerOptions);
+	}
+
+	private void drawCircle(LatLng point) {
+
+		// Instantiating CircleOptions to draw a circle around the marker
+		CircleOptions circleOptions = new CircleOptions();
+
+		// Specifying the center of the circle
+		circleOptions.center(point);
+
+		// Radius of the circle
+		circleOptions.radius(20);
+
+		// Border color of the circle
+		circleOptions.strokeColor(Color.BLACK);
+
+		// Fill color of the circle
+		circleOptions.fillColor(0x30ff0000);
+
+		// Border width of the circle
+		circleOptions.strokeWidth(2);
+
+		// Adding the circle to the GoogleMap
+		mMap.addCircle(circleOptions);
+
 	}
 
 	@Override

@@ -476,12 +476,13 @@ containing a value of this type.
         public static final int activity_main=0x7f030002;
         public static final int activity_main2=0x7f030003;
         public static final int activity_main3=0x7f030004;
-        public static final int activity_proximity_main=0x7f030005;
-        public static final int geoclient_usermode=0x7f030006;
-        public static final int geoclientuser_layout=0x7f030007;
-        public static final int geofenceadmin_layout=0x7f030008;
-        public static final int layout=0x7f030009;
-        public static final int notification=0x7f03000a;
+        public static final int activity_poly_line=0x7f030005;
+        public static final int activity_proximity_main=0x7f030006;
+        public static final int geoclient_usermode=0x7f030007;
+        public static final int geoclientuser_layout=0x7f030008;
+        public static final int geofenceadmin_layout=0x7f030009;
+        public static final int layout=0x7f03000a;
+        public static final int notification=0x7f03000b;
     }
     public static final class menu {
         public static final int create_new_path=0x7f0a0000;
@@ -491,7 +492,8 @@ containing a value of this type.
         public static final int geofence_admin_mode=0x7f0a0004;
         public static final int main=0x7f0a0005;
         public static final int main3=0x7f0a0006;
-        public static final int proximity_main=0x7f0a0007;
+        public static final int poly_line=0x7f0a0007;
+        public static final int proximity_main=0x7f0a0008;
     }
     public static final class string {
         public static final int Admin_mode=0x7f05002f;
@@ -630,6 +632,7 @@ containing a value of this type.
          */
         public static final int title_activity_geofence_client_mode=0x7f05003a;
         public static final int title_activity_main3=0x7f050029;
+        public static final int title_activity_poly_line=0x7f050041;
         public static final int title_activity_proximity_main=0x7f050040;
         public static final int title_addLocations=0x7f05002c;
         public static final int url=0x7f050033;
