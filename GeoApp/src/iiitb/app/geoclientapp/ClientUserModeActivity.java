@@ -27,6 +27,7 @@ public class ClientUserModeActivity extends Activity {
 
 	private List<PathData> pathsdata;
 	private GoogleMap googleMap;
+	private String SelectPath = "<Select Path>";
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -37,7 +38,7 @@ public class ClientUserModeActivity extends Activity {
 		// data filler
 		GetDataURL getDataUrl = new GetDataURL(this);
 		getDataUrl.execute(getString(R.string.url));
-		
+
 	}
 
 	public void displayPaths(String response) {
@@ -59,13 +60,15 @@ public class ClientUserModeActivity extends Activity {
 				pathsdata.add(entry.getValue());
 			}
 
+			pathnames.add(0, SelectPath);
+
 			Spinner sp = (Spinner) findViewById(R.id.spinner1);
 			ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
 					android.R.layout.simple_spinner_item, pathnames);
 			adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 			sp.setAdapter(adapter);
 			OnItemSelectedListener spinnerListener = new SpinnerItemSelectedListener(
-					this, pathsdata, googleMap, this,
+					pathsdata, googleMap, this,
 					(Spinner) findViewById(R.id.spinner2));
 			sp.setOnItemSelectedListener(spinnerListener);
 
@@ -74,8 +77,6 @@ public class ClientUserModeActivity extends Activity {
 		}
 
 	}
-
-
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {

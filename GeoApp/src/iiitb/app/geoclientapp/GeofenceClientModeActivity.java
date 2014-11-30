@@ -27,6 +27,7 @@ public class GeofenceClientModeActivity extends Activity {
 
 	private List<PathData> pathsdata;
 	private GoogleMap googleMap;
+	private String SelectPath = "<Select Path>";
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -56,6 +57,7 @@ public class GeofenceClientModeActivity extends Activity {
 				pathnames.add(entry.getKey());
 				pathsdata.add(entry.getValue());
 			}
+			pathnames.add(0, SelectPath);
 
 			Spinner sp = (Spinner) findViewById(R.id.adminmode_basic_spinner1);
 			ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
@@ -63,7 +65,7 @@ public class GeofenceClientModeActivity extends Activity {
 			adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 			sp.setAdapter(adapter);
 			OnItemSelectedListener spinnerListener = new SpinnerItemSelectedListener(
-					this, pathsdata, googleMap, this,
+					pathsdata, googleMap, this,
 					(Spinner) findViewById(R.id.adminmode_basic_spinner2));
 			sp.setOnItemSelectedListener(spinnerListener);
 			// sp.setSelection(dftIndex);
