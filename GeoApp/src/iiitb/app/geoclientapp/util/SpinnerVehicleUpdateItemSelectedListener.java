@@ -56,12 +56,12 @@ public class SpinnerVehicleUpdateItemSelectedListener implements
 			// Adding marker on the Google Map
 
 			// drawMarker(latLong);
-			GeoUtil.drawCircle(googleMap, latLong);
+			GeoUtil.drawCircle(googleMap, latLong, fencedata.getFenceRadius());
 		}
 		GeoUtil.addLines(googleMap, points);
 		if (pos == 0) {
 			Vehicle vehicle = null;
-			googleMap.clear();
+			//googleMap.clear();
 			// Setting latitude and longitude for the marker
 
 			for (int i = 0; i < path.getVehicles().size(); i++) {
@@ -77,7 +77,8 @@ public class SpinnerVehicleUpdateItemSelectedListener implements
 					markerOptions.position(latLong);
 					// Adding marker on the Google Map
 
-					GeoUtil.drawMarker(googleMap, latLong);
+					GeoUtil.drawMarker(googleMap, latLong, "Veh_RegNo : "
+							+ vehicle.getVehicleRegNo() + ",\n" + latLong);
 				}
 			}
 			if (latLong != null) {
@@ -101,7 +102,9 @@ public class SpinnerVehicleUpdateItemSelectedListener implements
 				markerOptions.position(latLong);
 				// Adding marker on the Google Map
 
-				GeoUtil.drawMarker(googleMap, latLong);
+				GeoUtil.drawMarker(googleMap, latLong,
+						"Veh_RegNo : " + vehicle.getVehicleRegNo() + ",\n"
+								+ latLong);
 			}
 
 			if (latLong != null) {

@@ -2,6 +2,7 @@ package iiitb.app.geoclientapp;
 
 import iiitb.app.geoclientapp.model.Geofence;
 import iiitb.app.geoclientapp.model.PathData;
+import iiitb.app.geoclientapp.util.GeoUtil;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -15,6 +16,7 @@ import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.DefaultHttpClient;
 
 import android.app.Dialog;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.AsyncTask;
@@ -75,9 +77,10 @@ public class CreateNewPathActivity extends FragmentActivity {
 				locationCount++;
 
 				// Drawing marker on the map
-				drawMarker(point);
+				GeoUtil.drawMarker(mMap, point, point + "");
 
-				drawCircle(point);
+				// drawCircle(point);
+				GeoUtil.drawCircle(mMap, point, 3.0);
 
 				/** Opening the editor object to write data to sharedPreferences */
 				SharedPreferences.Editor editor = sharedPreferences.edit();
@@ -142,7 +145,7 @@ public class CreateNewPathActivity extends FragmentActivity {
 		mMap.addMarker(markerOptions);
 	}
 
-	private void drawCircle(LatLng point) {
+	private void drawCircle(LatLng point, double radius) {
 
 		// Instantiating CircleOptions to draw a circle around the marker
 		CircleOptions circleOptions = new CircleOptions();
@@ -151,7 +154,7 @@ public class CreateNewPathActivity extends FragmentActivity {
 		circleOptions.center(point);
 
 		// Radius of the circle
-		circleOptions.radius(20);
+		circleOptions.radius(radius);
 
 		// Border color of the circle
 		circleOptions.strokeColor(Color.BLACK);
@@ -212,7 +215,7 @@ public class CreateNewPathActivity extends FragmentActivity {
 				}
 
 				new HttpAsyncTask().execute(getString(R.string.addpathurl));
-
+				invokeClientMod();
 			}
 		} else if (id == R.id.newpath_cancel) {
 
@@ -220,6 +223,11 @@ public class CreateNewPathActivity extends FragmentActivity {
 
 		}
 		return super.onOptionsItemSelected(item);
+	}
+
+	void invokeClientMod() {
+		Intent intent = new Intent(this, GeofenceClientModeActivity.class);
+		startActivity(intent);
 	}
 
 	private class HttpAsyncTask extends AsyncTask<String, Void, String> {

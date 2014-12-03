@@ -24,7 +24,7 @@ import com.google.android.gms.maps.model.PolylineOptions;
 
 public class GeoUtil {
 
-	public static void drawCircle(GoogleMap googleMap, LatLng point) {
+	public static void drawCircle(GoogleMap googleMap, LatLng point,double radius) {
 
 		// Instantiating CircleOptions to draw a circle around the marker
 		CircleOptions circleOptions = new CircleOptions();
@@ -33,7 +33,7 @@ public class GeoUtil {
 		circleOptions.center(point);
 
 		// Radius of the circle
-		circleOptions.radius(20);
+		circleOptions.radius(radius);
 
 		// Border color of the circle
 		circleOptions.strokeColor(Color.BLACK);
@@ -49,13 +49,13 @@ public class GeoUtil {
 
 	}
 
-	public static void drawMarker(GoogleMap googleMap, LatLng point) {
+	public static void drawMarker(GoogleMap googleMap, LatLng point, String text) {
 		// Creating an instance of MarkerOptions
 		MarkerOptions markerOptions = new MarkerOptions();
 
 		// Setting latitude and longitude for the marker
 		markerOptions.position(point);
-
+		markerOptions.title(text);
 		// Adding marker on the Google Map
 		googleMap.addMarker(markerOptions);
 	}

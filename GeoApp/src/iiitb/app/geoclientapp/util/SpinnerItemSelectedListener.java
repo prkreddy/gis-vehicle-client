@@ -45,7 +45,6 @@ public class SpinnerItemSelectedListener implements OnItemSelectedListener {
 			LatLng latLong = null;
 			googleMap.clear();
 
-			MarkerOptions markerOptions = new MarkerOptions();
 			List<LatLng> points = new ArrayList<LatLng>();
 			// Setting latitude and longitude for the marker
 
@@ -55,20 +54,21 @@ public class SpinnerItemSelectedListener implements OnItemSelectedListener {
 
 				latLong = new LatLng(fencedata.getLatitude(),
 						fencedata.getLongitude());
-				markerOptions.position(latLong);
 				points.add(latLong);
 				// Adding marker on the Google Map
 
-				// drawMarker(latLong);
-				GeoUtil.drawCircle(googleMap, latLong);
+				GeoUtil.drawMarker(googleMap, latLong, latLong + "");
+				GeoUtil.drawCircle(googleMap, latLong,
+						fencedata.getFenceRadius());
 			}
 			GeoUtil.addLines(googleMap, points);
-			// googleMap.addMarker(markerOptions);
-			googleMap.moveCamera(CameraUpdateFactory.newLatLng(latLong));
+			if (latLong != null) {
+				// googleMap.addMarker(markerOptions);
+				googleMap.moveCamera(CameraUpdateFactory.newLatLng(latLong));
 
-			// Setting the zoom level in the map on last position is clicked
-			googleMap.animateCamera(CameraUpdateFactory.zoomTo(13));
-
+				// Setting the zoom level in the map on last position is clicked
+				googleMap.animateCamera(CameraUpdateFactory.zoomTo(13));
+			}
 			updateVehiclesSpinner(path);
 		} else {
 			updateVehiclesSpinner2();

@@ -173,7 +173,7 @@ public class MainActivity extends FragmentActivity implements
 		// locationLabel.setText(msg);
 		try {
 
-			Intent intent = new Intent(this, PolyLine.class);
+			Intent intent = new Intent(this, ProximityMainActivity.class);
 
 			// intent.putExtra(LAT, currentLocation.getLatitude() + "");
 			// intent.putExtra(LON, currentLocation.getLongitude() + "");
