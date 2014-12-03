@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Vehicle</string>
+    <string name="action_settings">Settings</string>
+    <string name="default_msg">No Data</string>
+    <string name="udpateVehicleLocation">http://192.16.13.118:8080/api.geofence/rest/vehicleservice/updateLocation</string>
+    <string name="getvehicles">http://192.16.13.118:8080/api.geofence/rest/vehicleservice/allvehicles</string>
+
+</resources>
